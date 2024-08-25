@@ -37,15 +37,7 @@ function domcontentloaded(){
                     }else if(window.location.href=='http://localhost:3000/#contacts'||'https://amir248.github.io/switch-page-without-reloading/#contacts'){
                         console.log('Three');
                         document.querySelector('#content').innerHTML=`Three page! <br>  This contacts`;
-                    }else if(window.location.href=='http://localhost:3000/'){
-                        console.log('^_^');
-                        setTimeout(()=>{
-                            document.querySelector('#content').innerHTML=`Home page! <br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis molestiae delectus nobis. Minima repellat suscipit temporibus, iusto quia nostrum, dolorem quas fugiat nobis commodi ipsa exercitationem amet, illum tempore.
-                            `;
-                        },1500);
-
-                    }else if(window.location.href=='/switch-page-without-reloading/'){
+                    }else if(window.location.href=='http://localhost:3000/'||'https://amir248.github.io/switch-page-without-reloading/'){
                         console.log('^_^');
                         setTimeout(()=>{
                             document.querySelector('#content').innerHTML=`Home page! <br>
