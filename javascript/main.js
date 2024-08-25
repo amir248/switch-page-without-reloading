@@ -28,13 +28,13 @@ function domcontentloaded(){
             function changeContent(){
                 setTimeout(()=>{
                     window.addEventListener('hashchange',changeContent);
-                    if(window.location.href=='http://localhost:3000/#about'){
+                    if(window.location.href=='http://localhost:3000/#about'||'https://amir248.github.io/switch-page-without-reloading/#about'){
                         console.log('oNe');
                         document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
-                    }else if(window.location.href=='http://localhost:3000/#ourWork'){
+                    }else if(window.location.href=='http://localhost:3000/#ourWork'||'https://amir248.github.io/switch-page-without-reloading/#ourWork'){
                         console.log('Two');
                         document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser`;
-                    }else if(window.location.href=='http://localhost:3000/#contacts'){
+                    }else if(window.location.href=='http://localhost:3000/#contacts'||'https://amir248.github.io/switch-page-without-reloading/#contacts'){
                         console.log('Three');
                         document.querySelector('#content').innerHTML=`Three page! <br>  This contacts`;
                     }else if(window.location.href=='http://localhost:3000/'){
