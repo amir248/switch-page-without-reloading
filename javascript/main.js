@@ -43,7 +43,7 @@ function domcontentloaded(){
                             document.querySelector('#content').innerHTML=`Home page! <br>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis molestiae delectus nobis. Minima repellat suscipit temporibus, iusto quia nostrum, dolorem quas fugiat nobis commodi ipsa exercitationem amet, illum tempore.
                             `;
-                        },1500);
+                        },1700);
 
                     }else{
                         console.log('else');

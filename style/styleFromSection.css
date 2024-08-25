@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    width:100%;
+    max-width: 1300px;
+    min-height:130px;
+    background-color: aquamarine;
+}
+footer{
+    width:100%;
+    max-width: 1300px;
+    min-height:130px;
+    background-color: rgb(255, 214, 127);
+}
