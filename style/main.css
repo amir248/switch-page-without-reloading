@@ -50,3 +50,13 @@ nav{
     align-items: center;
     width:100%;
 }
+#boxMenu > a{
+    text-decoration: none;
+    color:coral;
+    text-shadow: 3px 3px black;
+    margin: 1%;
+}
+#boxMenu > a:hover{
+    color:bisque;
+    text-shadow: 3px 3px gray;
+}
