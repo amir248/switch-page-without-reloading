@@ -2,13 +2,39 @@
     margin:0;
     padding:0;
 }
+#menu{
+    min-height: 70px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 #menu > span{
     display:block;
     width:47px;
     height:3px;
     background-color: green;
-    margin:1%;
+    margin:15%;
 }
 body{
     background: gray;
+}
+body > main > header > nav > ul{
+    width: 100px;
+    min-width:370px;
+}
+body > main > header > nav > ul > a{
+    display:inline-block;
+    text-decoration: none;
+    color:green;
+    font-size:33px;margin-left:1%;
+}
+body > main > header > nav > ul > a > li{
+    list-style-type:none;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
 }

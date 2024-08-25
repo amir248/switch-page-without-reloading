@@ -21,9 +21,44 @@ function bodyDocument(){
         resolve(itsBody());
     })
 }; //bodyDocument();
+function domcontentloaded(){
+    return new Promise((resolve)=>{
+        // function load(){
+            // window.addEventListener('DOMContentLoaded',changeContent);
+            function changeContent(){
+                setTimeout(()=>{
+                    window.addEventListener('hashchange',changeContent);
+                    if(window.location.href=='http://localhost:3000/#about'){
+                        console.log('oNe');
+                        document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
+                    }else if(window.location.href=='http://localhost:3000/#ourWork'){
+                        console.log('Two');
+                        document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser`;
+                    }else if(window.location.href=='http://localhost:3000/#contacts'){
+                        console.log('Three');
+                        document.querySelector('#content').innerHTML=`Three page! <br>  This contacts`;
+                    }else if(window.location.href=='http://localhost:3000/'){
+                        console.log('^_^');
+                        setTimeout(()=>{
+                            document.querySelector('#content').innerHTML=`Home page! <br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis molestiae delectus nobis. Minima repellat suscipit temporibus, iusto quia nostrum, dolorem quas fugiat nobis commodi ipsa exercitationem amet, illum tempore.
+                            `;
+                        },1500);
 
+                    }else{
+                        console.log('else');
+                    }
+                },300);
+                    
+            };
+            
+        // };//load
+        resolve(changeContent());
+    })
+};//domcontentloaded
 async function loadNewScript(){
     await headerOnload();
     await bodyDocument();
+    await domcontentloaded();
 };
 window.addEventListener("DOMContentLoaded",loadNewScript);
