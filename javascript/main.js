@@ -36,7 +36,7 @@ function domcontentloaded(){
                         document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser`;
                     }else if(window.location.hash=='#contacts'){
                         console.log('Three');
-                        document.querySelector('#content').innerHTML=`Three page! <br>  This contacts`;
+                        document.querySelector('#content').innerHTML=`Three page! <br>  This contacts <br> My WhatsApp <a href="https://wa.clck.bar/79528885656">+79528885656</a> `;
                     }else if(window.location.href=='http://localhost:3000/'||'https://amir248.github.io/switch-page-without-reloading/'){
                         console.log('^_^');
                         setTimeout(()=>{
