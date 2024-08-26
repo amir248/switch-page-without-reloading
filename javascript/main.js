@@ -41,7 +41,7 @@ function domcontentloaded(){
                         console.log('^_^');
                         setTimeout(()=>{
                             document.querySelector('#content').innerHTML=`Home page! <br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis molestiae delectus nobis. Minima repellat suscipit temporibus, iusto quia nostrum, dolorem quas fugiat nobis commodi ipsa exercitationem amet, illum tempore.
+                               This is a simple example of a site with loading pages via javascript, like this: "single page application". So that you can make a multi-page site and push it to the "free" GitHub, with switching pages where there is a loading of sections.
                             `;
                         },1700);
 
