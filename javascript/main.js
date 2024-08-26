@@ -33,10 +33,10 @@ function domcontentloaded(){
                         document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
                     }else if(window.location.hash=='#ourWork'){
                         console.log('Two');
-                        document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser`;
+                        document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser. <br> The specialization of the company "Baron Sajterstauzen Web Workshop" is creating websites using simple JavaScript technologies with SEO optimization and promotion in contextual advertising.`;
                     }else if(window.location.hash=='#contacts'){
                         console.log('Three');
-                        document.querySelector('#content').innerHTML=`Three page! <br>  This contacts <br> My WhatsApp <a href="https://wa.clck.bar/79528885656">+79528885656</a> `;
+                        document.querySelector('#content').innerHTML=`Three page! <br>  This contacts <br> My WhatsApp <a href="https://wa.clck.bar/79528885656">+79528885656</a> And my phone number <a href="tel:+77004145901">+77004145901</a>`;
                     }else if(window.location.href=='http://localhost:3000/'||'https://amir248.github.io/switch-page-without-reloading/'){
                         console.log('^_^');
                         setTimeout(()=>{
