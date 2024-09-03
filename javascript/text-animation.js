@@ -29,4 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
     text.setAttribute('data-text', text.textContent);
     typeText();
 });
-console.log('text-animation');

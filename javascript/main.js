@@ -37,14 +37,14 @@ function domcontentloaded(){
                     }else if(window.location.hash=='#contacts'){
                         console.log('Three');
                         document.querySelector('#content').innerHTML=`Three page! <br>  This contacts <br> My WhatsApp <a href="https://wa.clck.bar/77004145901">+77004145901</a> And my phone number <a href="tel:+77004145901">+77004145901</a>`;
-                    }else if(window.location.href=='http://localhost:3000/'||'https://amir248.github.io/switch-page-without-reloading/'){
+                    }else if(window.location.href=='http://localhost:3000/'||'https://amir248.github.io/switch-page-without-reloading/'||'https://web.qucu.ru/'){
                         // console.log('^_^');
                         setTimeout(()=>{
                             document.querySelector('#content').innerHTML=`Home page! <br>
                                This is a simple example of a site with loading pages via javascript, like this: "single page application". So that you can make a multi-page site and push it to the "free" GitHub, with switching pages where there is a loading of sections.
                                <div class="container"><h1 id="animated-text">Привет, мир! It's animation text here</h1></div>
                             `;
-                        },1700);
+                        },2700);
                         setTimeout(()=>{
                             let textAnimation=document.createElement('link');
                             textAnimation.setAttribute('rel','stylesheet');
@@ -54,7 +54,7 @@ function domcontentloaded(){
                             textAnimationJS.src='javascript/text-animation.js';
                             document.querySelector('body').append(textAnimationJS)
 
-                        },1777);
+                        },0);
 
                     }else{
                         console.log('else');
