@@ -42,19 +42,10 @@ function domcontentloaded(){
                         setTimeout(()=>{
                             document.querySelector('#content').innerHTML=`Home page! <br>
                                This is a simple example of a site with loading pages via javascript, like this: "single page application". So that you can make a multi-page site and push it to the "free" GitHub, with switching pages where there is a loading of sections.
-                               <div class="container"><h1 id="animated-text">Привет, мир! It's animation text here</h1></div>
+                               
                             `;
                         },2700);
-                        setTimeout(()=>{
-                            let textAnimation=document.createElement('link');
-                            textAnimation.setAttribute('rel','stylesheet');
-                            textAnimation.href='style/text-animation.css';
-                            document.querySelector('head').append(textAnimation);
-                            let textAnimationJS=document.createElement('script');
-                            textAnimationJS.src='javascript/text-animation.js';
-                            document.querySelector('body').append(textAnimationJS)
-
-                        },0);
+                        
 
                     }else{
                         console.log('else');
@@ -67,9 +58,35 @@ function domcontentloaded(){
         resolve(changeContent());
     })
 };//domcontentloaded
+function animatedTextGo(){
+    return new Promise((resolve)=>{
+        function toGoNewAnimated(){
+            setTimeout(()=>{
+                let goNewText = document.createElement('div');
+                goNewText.setAttribute('id','container');
+                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">Привет, мир! It\'s animation text here</h1>';
+                document.querySelector('#content').append(goNewText);
+            },4000);
+            setTimeout(()=>{
+                let textAnimation=document.createElement('link');
+                textAnimation.setAttribute('rel','stylesheet');
+                textAnimation.href='style/text-animation.css';
+                document.querySelector('head').append(textAnimation);
+                let textAnimationJS=document.createElement('script');
+                textAnimationJS.src='javascript/text-animation.js';
+                document.querySelector('body').append(textAnimationJS);
+        
+            },0);
+        }
+        resolve(toGoNewAnimated());
+    });
+    
+
+};// animatedTextGo
 async function loadNewScript(){
     await headerOnload();
     await bodyDocument();
     await domcontentloaded();
+    await animatedTextGo();
 };
 window.addEventListener("DOMContentLoaded",loadNewScript);

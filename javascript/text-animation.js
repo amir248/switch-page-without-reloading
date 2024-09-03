@@ -1,6 +1,6 @@
 function typeText() {
     const text = document.getElementById('animated-text');
-    const newText = text.getAttribute('data-text');
+    const newText = document.querySelector('#animated-text').getAttribute('data-text');
     text.textContent = '';
     text.style.width = '0';
     let i = 0;
@@ -24,8 +24,9 @@ function typeText() {
     }
     type();
 }
-document.addEventListener("DOMContentLoaded", function() {
-    const text = document.getElementById('animated-text');
-    text.setAttribute('data-text', text.textContent);
-    typeText();
-});
+// document.addEventListener("DOMContentLoaded", function() );
+setTimeout(()=>{
+        const text = document.getElementById('animated-text');
+        text.setAttribute('data-text', text.textContent);
+        typeText();
+},4000);
