@@ -35,11 +35,23 @@ body > main > header > nav > ul{
     width: 100px;
     min-width:370px;
 }
+
+
 body > main > header > nav > ul > a{
     display:inline-block;
     text-decoration: none;
     color:green;
     font-size:33px;margin-left:1%;
+}
+@media(max-width:370px){
+    body > main > header > nav > ul > a{
+        min-width:170px;
+        font-size: 17px;
+    }
+    body > main > header > nav > ul{
+        /* width: 100px; */
+        min-width:170px;
+    }
 }
 body > main > header > nav > ul > a > li{
     list-style-type:none;
