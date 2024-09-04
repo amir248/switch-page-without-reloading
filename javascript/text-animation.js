@@ -1,6 +1,6 @@
 function typeText() {
     const text = document.getElementById('animated-text');
-    const newText = document.querySelector('#animated-text').getAttribute('data-text');
+    const newText = text.getAttribute('data-text');
     text.textContent = '';
     text.style.width = '0';
     let i = 0;
