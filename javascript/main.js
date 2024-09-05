@@ -66,7 +66,7 @@ function animatedTextGo(){
                 goNewText.setAttribute('id','container');
                 goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">Привет, мир! It\'s animation text here</h1>';
                 document.querySelector('#content').append(goNewText);
-            },4000);
+            },3300);
             setTimeout(()=>{
                 let textAnimation=document.createElement('link');
                 textAnimation.setAttribute('rel','stylesheet');
