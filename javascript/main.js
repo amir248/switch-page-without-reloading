@@ -29,10 +29,10 @@ function domcontentloaded(){
                 setTimeout(()=>{
                     window.addEventListener('hashchange',changeContent);
                     if(window.location.hash=='#about'){
-                        console.log('oNe');
+                        // console.log('oNe');
                         document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
                     }else if(window.location.hash=='#ourWork'){
-                        console.log('Two');
+                        // console.log('Two');
                         document.querySelector('#content').innerHTML=`Two page! <br> This order site with SEO and adveritser. <br> The specialization of the company "Baron Sajterstauzen Web Workshop" is creating websites using simple JavaScript technologies with SEO optimization and promotion in contextual advertising.`;
                     }else if(window.location.hash=='#contacts'){
                         console.log('Three');
@@ -42,11 +42,8 @@ function domcontentloaded(){
                         setTimeout(()=>{
                             document.querySelector('#content').innerHTML=`Home page! <br>
                                This is a simple example of a site with loading pages via javascript, like this: "single page application". So that you can make a multi-page site and push it to the "free" GitHub, with switching pages where there is a loading of sections.
-                               
                             `;
                         },2700);
-                        
-
                     }else{
                         console.log('else');
                     }
@@ -62,12 +59,6 @@ function animatedTextGo(){
     return new Promise((resolve)=>{
         function toGoNewAnimated(){
             setTimeout(()=>{
-                let goNewText = document.createElement('div');
-                goNewText.setAttribute('id','container');
-                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">Привет, мир! It\'s animation text here</h1>';
-                document.querySelector('#content').append(goNewText);
-            },3300);
-            setTimeout(()=>{
                 let textAnimation=document.createElement('link');
                 textAnimation.setAttribute('rel','stylesheet');
                 textAnimation.href='style/text-animation.css';
@@ -75,8 +66,14 @@ function animatedTextGo(){
                 let textAnimationJS=document.createElement('script');
                 textAnimationJS.src='javascript/text-animation.js';
                 document.querySelector('body').append(textAnimationJS);
-        
             },0);
+            setTimeout(()=>{
+                let goNewText = document.createElement('div');
+                // goNewText.setAttribute('id','container');
+                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">Привет, мир! It\'s animation text here</h1>';
+                document.querySelector('#content').append(goNewText);
+            },3300);
+            
         }
         resolve(toGoNewAnimated());
     });
