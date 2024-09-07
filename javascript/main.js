@@ -70,7 +70,7 @@ function animatedTextGo(){
             setTimeout(()=>{
                 let goNewText = document.createElement('div');
                 // goNewText.setAttribute('id','container');
-                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">Привет, мир! It\'s animation text here</h1>';
+                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">oK. Привет, мир! It\'s animation text here. And it\'s working</h1>';
                 document.querySelector('#content').append(goNewText);
             },3300);
             
