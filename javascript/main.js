@@ -80,7 +80,7 @@ function animatedTextGo(){
 };// animatedTextGo
 
 // if(location.pathname=='/photo'){
-if(location.href=='http://localhost:3000/photo'){
+if(location.href=='http://localhost:3000/photo'||'https://web.qucu.ru/photo'){
 console.log(location.pathname);
 function photoGallary(){
         return new Promise((resolve)=>{
@@ -100,7 +100,7 @@ function photoGallary(){
 
 // }
 async function loadNewScript(){
-    if(location.href=='http://localhost:3000/photo'){
+    if(location.href=='http://localhost:3000/photo'||'https://web.qucu.ru/photo'){
         await photoGallary();
     }
     await headerOnload();
