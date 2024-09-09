@@ -68,21 +68,25 @@ function domcontentloaded(){
 function animatedTextGo(){
     return new Promise((resolve)=>{
         function toGoNewAnimated(){
-            setTimeout(()=>{
-                let textAnimation=document.createElement('link');
-                textAnimation.setAttribute('rel','stylesheet');
-                textAnimation.href='style/text-animation.css';
-                document.querySelector('head').append(textAnimation);
-                let textAnimationJS=document.createElement('script');
-                textAnimationJS.src='javascript/text-animation.js';
-                document.querySelector('body').append(textAnimationJS);
-            },0);
-            setTimeout(()=>{
-                let goNewText = document.createElement('div');
-                // goNewText.setAttribute('id','container');
-                goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">oK. Привет, мир! It\'s animation text here. And it\'s working</h1>';
-                document.querySelector('#content').append(goNewText);
-            },3300);
+            if(window.location.href=='https://web.qucu.ru/#contacts'||window.location.href=='https://web.qucu.ru/#ourWork'||window.location.href=='https://web.qucu.ru/#about'){
+                return console.log('oK');
+            }else{
+                setTimeout(()=>{
+                    let textAnimation=document.createElement('link');
+                    textAnimation.setAttribute('rel','stylesheet');
+                    textAnimation.href='style/text-animation.css';
+                    document.querySelector('head').append(textAnimation);
+                    let textAnimationJS=document.createElement('script');
+                    textAnimationJS.src='javascript/text-animation.js';
+                    document.querySelector('body').append(textAnimationJS);
+                },0);
+                setTimeout(()=>{
+                    let goNewText = document.createElement('div');
+                    // goNewText.setAttribute('id','container');
+                    goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">oK. Привет, мир! It\'s animation text here. And it\'s working</h1>';
+                    document.querySelector('#content').append(goNewText);
+                },3300);
+            }
         }
         resolve(toGoNewAnimated());
     });
