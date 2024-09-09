@@ -15,9 +15,25 @@ article{
     /* min-height: 300px; */
     min-height:70vh;
     background-color: rgb(247, 232, 215);
-    display:grid;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: column;
+}
+article > h2{
+    margin:3%;
+}
+article > strong{
+    margin:3%;
+}
+article > p{
+    margin:3%;
+}
+article > #content{
+    margin:3%;
+}
+article > div{
+    margin:3%;
 }
 footer{
     width:100%;
