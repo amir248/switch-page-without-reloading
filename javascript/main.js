@@ -1,3 +1,6 @@
+const stateSite={
+    link:'true'
+}
 function headerOnload(){
     return new Promise((resolve)=>{
         function first(){
@@ -31,7 +34,11 @@ function domcontentloaded(){
                     window.addEventListener('hashchange',changeContent);
                     if(window.location.href=='/photo'){
                         console.log('oK');
-                    }else if(window.location.hash=='#about'){
+                    }else if(window.location.hash=='#about'&&stateSite.link=='undefined'){
+                        if(window.location.pathname=='/photo#about'||window.location.pathname=='/photo.html#about'){
+                            console.log('pathname');
+                            window.location.href='/';
+                        }
                         // console.log('oNe');
                         document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
                     }else if(window.location.hash=='#ourWork'){
@@ -100,9 +107,33 @@ function photoGallary(){
     };//photoGallary
 }
 // }
+function reloadLink(){
+    return new Promise((resolve)=>{
+        function linkAwait(){
+            console.log('reloadLink');
+            
+            // let scriptChangeLink=document.createElement('script');
+            // scriptChangeLink.src=/
+            window.addEventListener('hashchange',()=>{
+                if(window.location.href=='http://localhost:3000/photo#about'){
+                    location.href='http://localhost:3000#about';
+                }else if(window.location.href=='http://localhost:3000/photo#ourWork'){
+                    location.href='http://localhost:3000#ourWork';
+                }else if(window.location.href=='http://localhost:3000/photo#contacts'){
+                    location.href='http://localhost:3000#contacts';
+                }
+            });
+        }
+        resolve(linkAwait());
+    });
+}
+
 async function loadNewScript(){
     if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo.html'){
         await photoGallary();
+    }
+    if(location.href=='http://localhost:3000/photo'){
+        await reloadLink();
     }
     await headerOnload();
     await bodyDocument();
