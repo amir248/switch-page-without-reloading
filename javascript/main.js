@@ -140,7 +140,7 @@ async function loadNewScript(){
     if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo.html'){
         await photoGallary();
     }
-    if(location.href=='http://localhost:3000/photo'){
+    if(location.href=='http://localhost:3000/photo'||location.href=='https://web.qucu.ru/photo'){
         await reloadLink();
     }
     await headerOnload();
