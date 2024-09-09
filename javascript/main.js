@@ -29,7 +29,9 @@ function domcontentloaded(){
             function changeContent(){
                 setTimeout(()=>{
                     window.addEventListener('hashchange',changeContent);
-                    if(window.location.hash=='#about'){
+                    if(window.location.href=='/photo'){
+                        console.log('oK');
+                    }else if(window.location.hash=='#about'){
                         // console.log('oNe');
                         document.querySelector('#content').innerHTML=`It's first page. <br> Obaut it's company.`;
                     }else if(window.location.hash=='#ourWork'){
