@@ -82,7 +82,7 @@ function animatedTextGo(){
 };// animatedTextGo
 
 // if(location.pathname=='/photo'){
-if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo'){
+if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo.html'){
 console.log(location.pathname);
 function photoGallary(){
         return new Promise((resolve)=>{
@@ -101,7 +101,7 @@ function photoGallary(){
 }
 // }
 async function loadNewScript(){
-    if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo'){
+    if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo.html'){
         await photoGallary();
     }
     await headerOnload();

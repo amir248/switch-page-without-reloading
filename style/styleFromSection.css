@@ -15,6 +15,9 @@ article{
     /* min-height: 300px; */
     min-height:70vh;
     background-color: rgb(247, 232, 215);
+    display:grid;
+    justify-content: center;
+    align-items: center;
 }
 footer{
     width:100%;
