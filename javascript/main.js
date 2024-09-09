@@ -122,6 +122,14 @@ function reloadLink(){
                 }else if(window.location.href=='http://localhost:3000/photo#contacts'){
                     location.href='http://localhost:3000#contacts';
                 }
+
+                if(window.location.href=='https://web.qucu.ru/photo#about'){
+                    location.href='https://web.qucu.ru#about';
+                }else if(window.location.href=='https://web.qucu.ru/photo#ourWork'){
+                    location.href='https://web.qucu.ru#ourWork';
+                }else if(window.location.href=='https://web.qucu.ru/photo#contacts'){
+                    location.href='https://web.qucu.ru#contacts';
+                }
             });
         }
         resolve(linkAwait());
