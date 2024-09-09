@@ -34,7 +34,7 @@ function domcontentloaded(){
                     window.addEventListener('hashchange',changeContent);
                     if(window.location.href=='/photo'){
                         console.log('oK');
-                    }else if(window.location.hash=='#about'&&stateSite.link=='undefined'){
+                    }else if(window.location.hash=='#about'){
                         if(window.location.pathname=='/photo#about'||window.location.pathname=='/photo.html#about'){
                             console.log('pathname');
                             window.location.href='/';
