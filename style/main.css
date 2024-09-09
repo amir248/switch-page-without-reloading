@@ -33,7 +33,7 @@ main{
 }
 body > main > header > nav > ul{
     width: 100px;
-    min-width:370px;
+    min-width:390px;
 }
 
 
@@ -71,4 +71,8 @@ nav{
 #boxMenu > a:hover{
     color:bisque;
     text-shadow: 3px 3px gray;
+}
+img{
+    width: 100%;
+    max-width: 900px;
 }

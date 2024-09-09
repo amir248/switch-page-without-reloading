@@ -23,7 +23,8 @@ function bodyDocument(){
 }; //bodyDocument();
 function domcontentloaded(){
     return new Promise((resolve)=>{
-        // function load(){
+        if(window.location.pathname=='/'){
+// function load(){
             // window.addEventListener('DOMContentLoaded',changeContent);
             function changeContent(){
                 setTimeout(()=>{
@@ -50,9 +51,9 @@ function domcontentloaded(){
                 },300);
                     
             };
-            
         // };//load
         resolve(changeContent());
+    }
     })
 };//domcontentloaded
 function animatedTextGo(){
@@ -73,14 +74,35 @@ function animatedTextGo(){
                 goNewText.innerHTML='<h1 id="animated-text" data-text="Привет, мир! It\'s animation text, that working.">oK. Привет, мир! It\'s animation text here. And it\'s working</h1>';
                 document.querySelector('#content').append(goNewText);
             },3300);
-            
         }
         resolve(toGoNewAnimated());
     });
-    
-
 };// animatedTextGo
+
+// if(location.pathname=='/photo'){
+if(location.href=='http://localhost:3000/photo'){
+console.log(location.pathname);
+function photoGallary(){
+        return new Promise((resolve)=>{
+            function wievPhoto(){
+                setTimeout(()=>{
+                    let photoScript = document.createElement('script');
+                    photoScript.setAttribute('src','javascript/photoGallary.js');
+                    document.querySelector('body').append(photoScript);
+                    let photos=document.createElement('picture');
+                    document.querySelector('article').append(photos);   
+                },1700);
+            }
+            resolve(wievPhoto());
+        });
+    };//photoGallary
+}
+
+// }
 async function loadNewScript(){
+    if(location.href=='http://localhost:3000/photo'){
+        await photoGallary();
+    }
     await headerOnload();
     await bodyDocument();
     await domcontentloaded();
