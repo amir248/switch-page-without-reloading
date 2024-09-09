@@ -54,7 +54,7 @@ function domcontentloaded(){
         // };//load
         resolve(changeContent());
     }
-    })
+    });
 };//domcontentloaded
 function animatedTextGo(){
     return new Promise((resolve)=>{
@@ -97,7 +97,6 @@ function photoGallary(){
         });
     };//photoGallary
 }
-
 // }
 async function loadNewScript(){
     if(location.href=='https://web.qucu.ru/photo'||location.href=='http://localhost:3000/photo'){
