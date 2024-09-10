@@ -45,7 +45,8 @@ body > main > header > nav > ul > a{
 }
 @media(max-width:470px){
     body > main > header > nav > ul > a{
-        min-width:170px;
+        min-width:70px;
+        margin:3%;
         font-size: 17px;
     }
     body > main > header > nav > ul{
