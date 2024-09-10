@@ -43,7 +43,7 @@ body > main > header > nav > ul > a{
     color:green;
     font-size:33px;margin-left:1%;
 }
-@media(max-width:370px){
+@media(max-width:470px){
     body > main > header > nav > ul > a{
         min-width:170px;
         font-size: 17px;
@@ -75,4 +75,11 @@ nav{
 img{
     width: 100%;
     max-width: 900px;
+    margin-left: -3px;
+}
+picture{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:100%;
 }
