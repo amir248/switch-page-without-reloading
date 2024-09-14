@@ -8,6 +8,12 @@ header{
     /* min-height:130px; */
     min-height:20vh;
     background-color: rgb(180, 248, 225);
+} header > h1{
+    margin:1%;
+    text-shadow:black 1px 1px;
+    color:white;
+    text-shadow: green -1px -1px;
+    text-shadow: green 1px 1px 3px;
 }
 article{
     width:100%;
