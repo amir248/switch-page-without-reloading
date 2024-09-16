@@ -9,7 +9,10 @@ document.querySelector('#nextPhoto').addEventListener("click",()=>{
     // console.log('oKK '+ countClick);
     img.src='https://amir.qucu.ru/public/images/DSC_7774-550.webp';
     if(countClick==2){
-        countClick=0;
+        // countClick=0;
         img.src='https://qucu.ru/img/correctPhotoGallary/DSC_8196.webp';
+    }else if(countClick==3){
+        img.src='https://qucu.ru/blozhik/img/excellent-work/DSC_8232-900.webp';
+        countClick=0;
     }
 });
