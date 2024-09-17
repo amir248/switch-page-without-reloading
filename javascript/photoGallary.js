@@ -35,7 +35,6 @@ document.querySelector('picture').append(rightButton);
 setTimeout(()=>{
     document.querySelector('#leftButton').addEventListener('click',()=>{
             countClick++;
-            // console.log('oKK '+ countClick);
             img.src='img/1726571948249.jpg';
             if(countClick==2){
                 img.src='img/1726572642360.jpg';
