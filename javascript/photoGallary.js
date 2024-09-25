@@ -49,7 +49,7 @@ setTimeout(()=>{
                 console.log('IF ELSE '+countClick);
                 return img.setAttribute('src','img/1726571948298.jpg');
             }
-    });
+    },0);
     document.querySelector('#rightButton').addEventListener('click',()=>{
             countClick--;
             // console.log('oKK '+ countClick);
